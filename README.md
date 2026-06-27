@@ -13,7 +13,7 @@ Together, these scripts transform raw brokerage statement data into structured d
 
 ### Investment_Parser.py
 
-`Investment_Parser.py` serves as the entry point of the pipeline. The script reads raw brokerage statement data from Vanguard Brokerage Services and parses the information into two structured datasets:
+`Investment_Parser.py` serves as the entry point of the pipeline. The script reads raw brokerage statement data and parses the information into two structured datasets:
 
 * Holdings Table
 * Transactions Table
