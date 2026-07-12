@@ -11,6 +11,10 @@ The data pipeline is written entirely in Python and is designed to automate the 
 
 Together, these scripts transform raw brokerage statement data into structured datasets enriched with portfolio performance and risk analytics.
 
+### Investment_Runner.py
+
+`Investment_Runner.py` acts as the orchestration layer for the pipeline. It coordinates the execution of the parser and analytics scripts, ensuring that raw statement data is processed, analyzed, and prepared for downstream consumption through a single automated workflow.
+
 ### Investment_Parser.py
 
 `Investment_Parser.py` serves as the entry point of the pipeline. The script reads raw brokerage statement data and parses the information into two structured datasets:
@@ -45,6 +49,22 @@ These calculations enrich the underlying datasets and create the analytical foun
 
 `Investment_Functions.py` contains reusable helper functions that support both the parsing and analytics processes. Centralizing common functionality improves code maintainability, reduces duplication, and simplifies future enhancements to the pipeline.
 
-### Investment_Runner.py
+### R Shiny Dashboard
 
-`Investment_Runner.py` acts as the orchestration layer for the pipeline. It coordinates the execution of the parser and analytics scripts, ensuring that raw statement data is processed, analyzed, and prepared for downstream consumption through a single automated workflow.
+The project includes an interactive R Shiny dashboard that serves as the visualization and reporting layer of the portfolio analytics pipeline. After the Python pipeline processes brokerage data and stores the results in a SQLite database, the Shiny application retrieves the data and presents it through an intuitive, interactive interface.
+
+The dashboard allows users to explore portfolio performance across multiple dimensions, including:
+
+Portfolio Overview
+Holdings and Asset Allocation
+Sector Allocation
+Transaction History
+Monthly Returns
+Dividend Yield
+Sharpe Ratio
+Security Value Over Time
+Individual Security Performance
+
+Interactive filtering enables users to analyze metrics by individual security or portfolio sector, while dynamic visualizations provide insights into historical performance, risk-adjusted returns, and portfolio composition.
+
+By separating the analytical backend (Python) from the presentation layer (R Shiny), the application provides a modular architecture where the data pipeline handles ingestion and computation, while the dashboard delivers an accessible interface for portfolio monitoring and decision-making.
