@@ -55,15 +55,15 @@ The project includes an interactive R Shiny dashboard that serves as the visuali
 
 The dashboard allows users to explore portfolio performance across multiple dimensions, including:
 
-Portfolio Overview
-Holdings and Asset Allocation
-Sector Allocation
-Transaction History
-Monthly Returns
-Dividend Yield
-Sharpe Ratio
-Security Value Over Time
-Individual Security Performance
+* Portfolio Overview
+* Holdings and Asset Allocation
+* Sector Allocation
+* Transaction History
+* Monthly Returns
+* Dividend Yield
+* Sharpe Ratio
+* Security Value Over Time
+* Individual Security Performance
 
 Interactive filtering enables users to analyze metrics by individual security or portfolio sector, while dynamic visualizations provide insights into historical performance, risk-adjusted returns, and portfolio composition.
 
